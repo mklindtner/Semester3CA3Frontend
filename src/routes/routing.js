@@ -4,16 +4,17 @@ import welcome from '../welcome';
 import StarwarsTable from '../sw/starwars';
 import LoginAuth from '../login/loginAuth';
 import StarwarsTable2 from '../sw/starwars2';
+import '../App.css';
 
 class RoutesForApp extends Component {
     render() {
         return (
             <Router>
                 <div>
-                    <nav className="navbar navbar-light" />
-                    <ul className="nav navbar-nav">
+                    <nav className="header" />
+                    <ul className="header">
                         <li>
-                            <NavLink to="/">Welcome Page</NavLink>
+                            <NavLink exact={true} to="/">Welcome Page</NavLink>
                         </li>
                         <li>
                             <NavLink to="/login">Login</NavLink>
