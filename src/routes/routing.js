@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
 import welcome from '../welcome';
 import StarwarsTable from '../sw/starwars';
 import LoginAuth from '../login/loginAuth';
+import StarwarsTable2 from '../sw/starwars2';
 
 class RoutesForApp extends Component {
     render() {
@@ -20,6 +21,9 @@ class RoutesForApp extends Component {
                         <li>
                             <NavLink to="/sw/starwars">starwars</NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/sw/starwars2">starwars2</NavLink>
+                        </li>
                     </ul>
                     <Switch>
                         <Route
@@ -36,6 +40,11 @@ class RoutesForApp extends Component {
                             exact={true}
                             path="/sw/starwars"
                             component={StarwarsTable}
+                        />
+                        <Route
+                            exact={true}
+                            path="/sw/starwars2"
+                            component={StarwarsTable2}
                         />
                     </Switch>
                 </div>

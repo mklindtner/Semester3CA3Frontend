@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 const URLSW = require("../../package.json").urls.SW;
 const entityAmount = 5;
 
+
+
 class StarwarsTable extends Component {
     constructor() {
         super();
@@ -38,6 +40,9 @@ class StarwarsTable extends Component {
         });
         this.componentDidMount();
     }
+
+
+
 
     //chnage prev & next into 1 component
     //https://docs.google.com/document/d/15XRzm0SlW13eRUvQq8u19oAM9Jo2_iderDsnWlIBjsY/edit
