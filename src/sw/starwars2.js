@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import BootstrapTable from 'react-bootstrap-table-next';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 
 import paginationFactory from 'react-bootstrap-table2-paginator';
 const URLSW = require("../../package.json").urls.SW;
@@ -18,7 +17,7 @@ class StarwarsTable2 extends Component {
             persons: [],
             page: startIndex,
             sizePerPage: entityAmount,
-            totalSize: 25
+            totalSize: 50
         })
     }
 
@@ -51,7 +50,7 @@ class StarwarsTable2 extends Component {
         const currentIndex = (page - 1) * sizePerPage;
         const URI = `${URLSW}/${currentIndex}/${sizePerPage}`;
         console.log(URI);
-        let p = await fetch(URI)
+        await fetch(URI)
             .then(res => {
                 return res.json();
             })
